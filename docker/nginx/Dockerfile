@@ -4,6 +4,6 @@ FROM nginx:1.24.0-alpine
 ENV TZ=Asia/Tokyo
 
 # 設定ファイルをコピー
-COPY ./docker/nginx/*.conf /etc/nginx/conf.d/
+# COPY ./docker/nginx/*.conf /etc/nginx/conf.d/
 
 WORKDIR /work/src
