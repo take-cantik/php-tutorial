@@ -257,7 +257,7 @@ default_socket_timeout = 60
 ;extension=gmp
 ;extension=intl
 ;extension=imap
-;extension=mbstring
+extension=mbstring
 ;extension=exif      ; Must be after mbstring as it depends on it
 ;extension=mysqli
 ;extension=oci8_12c  ; Use with Oracle Database 12c Instant Client
@@ -268,7 +268,7 @@ default_socket_timeout = 60
 ;extension=pdo_mysql
 ;extension=pdo_oci
 ;extension=pdo_odbc
-;extension=pdo_pgsql
+extension=pdo_pgsql
 ;extension=pdo_sqlite
 ;extension=pgsql
 ;extension=shmop
@@ -291,26 +291,10 @@ default_socket_timeout = 60
 ; Module Settings ;
 ;;;;;;;;;;;;;;;;;;;
 
-[CLI Server]
-; Whether the CLI web server uses ANSI color coding in its terminal output.
-cli_server.color = On
-
 [Date]
 ; Defines the default timezone used by the date functions
 ; https://php.net/date.timezone
-;date.timezone =
-
-; https://php.net/date.default-latitude
-;date.default_latitude = 31.7667
-
-; https://php.net/date.default-longitude
-;date.default_longitude = 35.2333
-
-; https://php.net/date.sunrise-zenith
-;date.sunrise_zenith = 90.833333
-
-; https://php.net/date.sunset-zenith
-;date.sunset_zenith = 90.833333
+date.timezone = ${TZ}
 
 [filter]
 ; https://php.net/filter.default
